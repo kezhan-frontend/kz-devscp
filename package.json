@@ -1,0 +1,9 @@
+{
+  "name": "kz-devscp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "kz-task-scp": "^1.0.1"
+  }
+}
