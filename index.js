@@ -2,12 +2,15 @@ var taskScp = require('kz-task-scp');
 var pkg = require('./package.json');
 
 module.exports = function(options) {
+    options || (options = {});
+
     var bone = require('bone');
     var host = options.host;
     var username = options.username;
     var password = options.password;
     var devRoot = options.root;
-    var pagesName = options.pages ? ('/' + options.pages + '/pages') : '';
+    var pages = options.pages ? '/' + options.pages : '';
+    var pagesName = options.pages ? (pages + '/pages') : '';
 
     var run = function(arr, fs) {
         for(var i in arr) {
@@ -39,7 +42,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev.kezhanwang.cn/static'
+            path: devRoot + '/dev.kezhanwang.cn/static' + pages
         },
         path: '~/dist/version.json'
     })];
@@ -65,7 +68,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev2.kezhanwang.cn/www/static'
+            path: devRoot + '/dev2.kezhanwang.cn/www/static' + pages
         },
         path: '~/dist/version.json'
     })];
@@ -91,7 +94,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev3.kezhanwang.cn/www/static'
+            path: devRoot + '/dev3.kezhanwang.cn/www/static' + pages
         },
         path: '~/dist/version.json'
     })];
@@ -117,7 +120,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev5.kezhanwang.cn/www/static'
+            path: devRoot + '/dev5.kezhanwang.cn/www/static' + pages
         },
         path: '~/dist/version.json'
     })];
@@ -143,7 +146,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev6.kezhanwang.cn/kz/static'
+            path: devRoot + '/dev6.kezhanwang.cn/kz/static' + pages
         },
         path: '~/dist/version.json'
     })];
@@ -169,7 +172,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot + '/dev7.kezhanwang.cn/www/static'
+            path: devRoot + '/dev7.kezhanwang.cn/www/static' + pages
         },
         path: '~/dist/version.json'
     })];
