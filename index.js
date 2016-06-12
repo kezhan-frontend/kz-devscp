@@ -7,6 +7,7 @@ module.exports = function(options) {
     var username = options.username;
     var password = options.password;
     var devRoot = options.root;
+    var pagesName = options.pages ? ('/' + options.pages + '/pages') : '';
 
     var run = function(arr, fs) {
         for(var i in arr) {
@@ -22,7 +23,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev.kezhanwang.cn/static'
+            path: devRoot + '/dev.kezhanwang.cn/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -30,7 +31,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev.kezhanwang.cn/pages'
+            path: devRoot + '/dev.kezhanwang.cn/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -38,7 +39,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev.kezhanwang.cn/static'
+            path: devRoot + '/dev.kezhanwang.cn/static'
         },
         path: '~/dist/version.json'
     })];
@@ -48,7 +49,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev2.kezhanwang.cn/www/static'
+            path: devRoot + '/dev2.kezhanwang.cn/www/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -56,7 +57,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev2.kezhanwang.cn/www/pages'
+            path: devRoot + '/dev2.kezhanwang.cn/www/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -64,7 +65,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev2.kezhanwang.cn/www/static'
+            path: devRoot + '/dev2.kezhanwang.cn/www/static'
         },
         path: '~/dist/version.json'
     })];
@@ -74,7 +75,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev3.kezhanwang.cn/www/static'
+            path: devRoot + '/dev3.kezhanwang.cn/www/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -82,7 +83,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev3.kezhanwang.cn/www/pages'
+            path: devRoot + '/dev3.kezhanwang.cn/www/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -90,7 +91,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev3.kezhanwang.cn/www/static'
+            path: devRoot + '/dev3.kezhanwang.cn/www/static'
         },
         path: '~/dist/version.json'
     })];
@@ -100,7 +101,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev5.kezhanwang.cn/www/static'
+            path: devRoot + '/dev5.kezhanwang.cn/www/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -108,7 +109,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev5.kezhanwang.cn/www/pages'
+            path: devRoot + '/dev5.kezhanwang.cn/www/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -116,7 +117,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev5.kezhanwang.cn/www/static'
+            path: devRoot + '/dev5.kezhanwang.cn/www/static'
         },
         path: '~/dist/version.json'
     })];
@@ -126,7 +127,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev6.kezhanwang.cn/kz/static'
+            path: devRoot + '/dev6.kezhanwang.cn/kz/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -134,7 +135,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev6.kezhanwang.cn/kz/pages'
+            path: devRoot + '/dev6.kezhanwang.cn/kz/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -142,7 +143,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev6.kezhanwang.cn/kz/static'
+            path: devRoot + '/dev6.kezhanwang.cn/kz/static'
         },
         path: '~/dist/version.json'
     })];
@@ -152,7 +153,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev7.kezhanwang.cn/www/static'
+            path: devRoot + '/dev7.kezhanwang.cn/www/static'
         },
         path: '~/dist/static'
     }), taskScp({
@@ -160,7 +161,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev7.kezhanwang.cn/www/pages'
+            path: devRoot + '/dev7.kezhanwang.cn/www/pages' + pagesName
         },
         path: '~/dist/pages'
     }), taskScp({
@@ -168,7 +169,7 @@ module.exports = function(options) {
             host: host,
             username: username,
             password: password,
-            path: devRoot+'/dev7.kezhanwang.cn/www/static'
+            path: devRoot + '/dev7.kezhanwang.cn/www/static'
         },
         path: '~/dist/version.json'
     })];
@@ -191,7 +192,7 @@ module.exports = function(options) {
         var program = command('scp');
 
         program.version(pkg.version)
-            .description('scp文件到开发机上, 可部署域名:'+keys.join('、'))
+            .description('scp文件到开发机上, 可部署域名:' + keys.join('、'))
             .action(function(remote, cmd) {
                 if(!cmd || !(remote in map)) {
                     program.outputHelp();
