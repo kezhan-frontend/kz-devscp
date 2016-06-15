@@ -4,6 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "kz-task-scp": "latest"
+    "kz-task-scp": "^1.0.3"
   }
 }
