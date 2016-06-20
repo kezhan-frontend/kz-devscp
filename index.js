@@ -177,13 +177,40 @@ module.exports = function(options) {
         path: '~/dist/version.json'
     })];
 
+    var union = [taskScp({
+        server: {
+            host: host,
+            username: username,
+            password: password,
+            path: devRoot + '/dev.union.kezhanwang.cn/www/static'
+        },
+        path: '~/dist/static'
+    }), taskScp({
+        server: {
+            host: host,
+            username: username,
+            password: password,
+            path: devRoot + '/dev.union.kezhanwang.cn/www/pages' + pagesName
+        },
+        path: '~/dist/pages'
+    }), taskScp({
+        server: {
+            host: host,
+            username: username,
+            password: password,
+            path: devRoot + '/dev.union.kezhanwang.cn/www/static' + pages
+        },
+        path: '~/dist/version.json'
+    })];
+
     var map = {
         dev,
         dev2,
         dev3,
         dev5,
         dev6,
-        dev7
+        dev7,
+        union
     };
 
     var keys = [];
